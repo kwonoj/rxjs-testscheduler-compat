@@ -4,6 +4,10 @@
   "description": "RxJS v4 TestScheduler interface for RxJS v5",
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
+  "engines": {
+    "npm": ">=3.0.0",
+    "node": ">=4.2.4"
+  },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
