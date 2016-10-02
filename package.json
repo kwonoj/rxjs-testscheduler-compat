@@ -10,6 +10,9 @@
     "ghooks": {
       "commit-msg": "node ./node_modules/validate-commit-msg/index.js",
       "pre-commit": "npm run lint:staged"
+    },
+    "validate-commit-msg": {
+      "types": ["feat", "fix", "docs", "style", "refactor", "perf", "test", "chore", "revert", "ci", "build"]
     }
   },
   "nyc": {
