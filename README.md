@@ -11,7 +11,7 @@
 This has a peer dependencies of `rxjs@5.*.*`, which will have to be installed as well
 
 ```sh
-npm install rxjs-testscheduler-compat
+npm install @kwonoj/rxjs-testscheduler-compat
 ```
 
 # Usage
