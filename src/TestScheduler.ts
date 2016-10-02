@@ -8,7 +8,7 @@ import { TestMessage } from 'rxjs/testing/TestMessage';
 import { isArray } from 'rxjs/util/isArray';
 import { ArgumentOutOfRangeError } from 'rxjs/util/ArgumentOutOfRangeError';
 
-import { VirtualTestScheduler, SchedulerOptions } from './VirtualTestScheduler';
+import { VirtualTestScheduler, SchedulerStartOptions } from './VirtualTestScheduler';
 import { next, error, complete } from './TestMessageValue';
 import { VirtualObserver, BaseVirtualObserver } from './VirtualObserver';
 import { VirtualPromise, BaseVirtualPromise } from './VirtualPromise';
@@ -28,7 +28,7 @@ export class TestScheduler extends VirtualTimeScheduler implements VirtualTestSc
     return actions && actions.length > 0 ? actions[0] : null;
   }
 
-  private setupOptions(options: SchedulerOptions): SchedulerOptions {
+  private setupOptions(options: SchedulerStartOptions): SchedulerStartOptions {
     const ret = options;
     if (!options.created) {
       ret.created = 100;
@@ -139,7 +139,7 @@ export class TestScheduler extends VirtualTimeScheduler implements VirtualTestSc
   }
 
   public startScheduler<T>(observableFactory: () => Observable<T>,
-                           options: SchedulerOptions = {}): VirtualObserver {
+                           options: SchedulerStartOptions = {}): VirtualObserver {
     const schedulerOptions = this.setupOptions(options);
     const { created, subscribed, unsubscribed } = schedulerOptions;
     const observer = this.createObserver();

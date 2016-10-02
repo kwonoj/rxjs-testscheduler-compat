@@ -6,7 +6,7 @@ import { VirtualTimeScheduler } from 'rxjs/scheduler/VirtualTimeScheduler';
 import { VirtualObserver } from './VirtualObserver';
 import { VirtualPromise } from './VirtualPromise';
 
-export interface SchedulerOptions {
+export interface SchedulerStartOptions {
   created?: number;
   subscribed?: number;
   unsubscribed?: number;
@@ -29,6 +29,6 @@ export interface VirtualTestScheduler extends VirtualTimeScheduler {
   scheduleAbsolute<T>(work: (state?: T) => void, dueFrame?: number, state?: T): Subscription;
   scheduleRelative<T>(work: (state?: T) => void, byFrame?: number, state?: T): Subscription;
 
-  startScheduler<T>(observableFactory: () => Observable<T>, options?: SchedulerOptions): VirtualObserver;
+  startScheduler<T>(observableFactory: () => Observable<T>, options?: SchedulerStartOptions): VirtualObserver;
   stop(): void;
 }
