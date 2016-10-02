@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "RxJS v4 TestScheduler interface for RxJS v5",
   "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
@@ -64,6 +65,18 @@
     "type": "git",
     "url": "git+https://github.com/kwonoj/rxjs-testscheduler-compat.git"
   },
+  "keywords": [
+    "Rx",
+    "RxJS",
+    "ReactiveX",
+    "ReactiveExtensions",
+    "Streams",
+    "Observables",
+    "Observable",
+    "Stream",
+    "ES6",
+    "ES2015"
+  ],
   "author": "OJ Kwon <kwon.ohjoong@gmail.com>",
   "license": "MIT",
   "bugs": {
@@ -87,7 +100,7 @@
     "typings": "^1.4.0",
     "validate-commit-msg": "^2.8.0"
   },
-  "dependencies": {
+  "peerDependencies": {
     "rxjs": "^5.0.0-beta.12"
   }
 }
