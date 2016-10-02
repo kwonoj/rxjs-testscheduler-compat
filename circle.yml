@@ -1,0 +1,13 @@
+## Customize dependencies
+dependencies:
+  post:
+    - npm run lint
+
+## Customize test commands
+test:
+  override:
+    - npm run build
+    - rm -rf ./dist
+    - npm run test:cover
+  post:
+    - bash <(curl -s https://codecov.io/bash)
