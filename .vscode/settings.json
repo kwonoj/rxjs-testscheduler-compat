@@ -1,0 +1,17 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    ".nyc_output": true,
+    "coverage": true,
+    "node_modules": true,
+    "typings": true,
+    "dist": true
+  },
+  "docthis.includeTypes": true,
+  "typescript.useCodeSnippetsOnMethodSuggest": false,
+  "typescript.tsdk": "node_modules/typescript/lib/"
+}
