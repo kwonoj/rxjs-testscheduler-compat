@@ -41,7 +41,7 @@
   "scripts": {
     "prepublish": "typings install",
     "test": "npm-run-all build:clean && mocha --reporter nyan --compilers ts:ts-node/register --recursive --bail spec",
-    "test:cover": "nyc npm test",
+    "test:cover": "nyc --reporter=lcov --reporter=html npm test",
     "lint": "tslint src/**/*.ts spec/**/*.ts",
     "lint:staged": "lint-staged",
     "build": "npm-run-all build:clean && tsc",
