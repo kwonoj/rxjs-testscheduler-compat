@@ -12,7 +12,19 @@
       "pre-commit": "npm run lint:staged"
     },
     "validate-commit-msg": {
-      "types": ["feat", "fix", "docs", "style", "refactor", "perf", "test", "chore", "revert", "ci", "build"]
+      "types": [
+        "feat",
+        "fix",
+        "docs",
+        "style",
+        "refactor",
+        "perf",
+        "test",
+        "chore",
+        "revert",
+        "ci",
+        "build"
+      ]
     }
   },
   "nyc": {
@@ -65,7 +77,6 @@
     "ghooks": "^1.3.2",
     "lint-staged": "^3.0.3",
     "lodash": "^4.16.2",
-    "lodash.isequal": "^4.4.0",
     "mocha": "^3.1.0",
     "npm-run-all": "^3.1.0",
     "nyc": "^8.3.0",
