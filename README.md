@@ -4,7 +4,7 @@
 
 # RxJS-TestScheduler-Compat
 
-`rxjs-testscheduler-compat` provides RxJS v4's [test scheduler interface](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/api/testing/testscheduler.md) to v5 version of [RxJS](https://github.com/ReactiveX/rxjs) allows to migrate existing test cases with minimum effort as well as writing new test cases with certain cases.
+`rxjs-testscheduler-compat` provides RxJS v4's [test scheduler interface](https://github.com/Reactive-Extensions/RxJS/blob/master/doc/api/testing/testscheduler.md) to v5 version of [RxJS](https://github.com/ReactiveX/rxjs) allows to migrate existing test cases with minimum effort as well as writing new test cases for certain cases.
 
 # Install
 
@@ -20,7 +20,7 @@ You can import `TestScheduler` and other helpers to create test cases.
 
 ```js
 import * as Rx from 'rxjs';
-import { TestScheduler, next, complete } from 'rxjs-testscheduler-compat';
+import { TestScheduler, next, complete } from '@kwonoj/rxjs-testscheduler-compat';
 
 const scheduler = new TestScheduler();
 const observer = scheduler.createObserver();
@@ -32,7 +32,7 @@ const subject = scheduler.createHotObservable(
       complete(80)
     );
 
-subject.subscribe(firstObserver);
+subject.subscribe(observer);
 
 scheduler.advanceTo(30);
 ```
@@ -41,7 +41,7 @@ As this does not patches anything in RxJS v5's test scheduler, you can use both 
 
 ```js
 import * as Rx from 'rxjs';
-import { TestScheduler as CompatScheduler } from 'rxjs-testscheduler-compat';
+import { TestScheduler as CompatScheduler } from '@kwonoj/rxjs-testscheduler-compat';
 
 const v5Scheduler = new Rx.TestScheduler(...);
 const v4Scheduler = new CompatScheduler();
