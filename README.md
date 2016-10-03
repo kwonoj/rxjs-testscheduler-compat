@@ -67,7 +67,7 @@ and `subscribe` returns [`SubscriptionLog`](https://github.com/ReactiveX/rxjs/bl
 ## Scheduler instance functions
 
 - `TestScheduler::start()` -> `TestScheduler::flush()`
-- does not support scheduler's instance methods for scheduling such as `scheduleFuture`, `schedulerRecursive`, `schedulePeriodic`...
+- does not support scheduler's instance methods for scheduling such as `scheduleFuture`, `schedulerRecursive`, `schedulePeriodic`... except `scheduleAbsolute`, `scheduleRelative`, `startScheduler`
 
 # Building / Testing
 
