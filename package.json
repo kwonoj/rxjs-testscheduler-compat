@@ -38,7 +38,8 @@
       "src/**/*.ts"
     ],
     "exclude": [
-      "typings"
+      "typings",
+      "node_modules"
     ],
     "extension": [
       ".ts"
