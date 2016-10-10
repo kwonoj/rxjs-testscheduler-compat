@@ -10,6 +10,8 @@ export interface VirtualPromise extends Promise<any> {
 }
 
 export class BaseVirtualPromise implements VirtualPromise {
+  [Symbol.toStringTag] = 'promise';
+
   readonly messages: Array<TestMessage>;
   private observers: Array<PartialObserver<any>> = [];
 
