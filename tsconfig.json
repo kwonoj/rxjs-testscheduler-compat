@@ -22,6 +22,6 @@
     "tabSize": 2
   },
   "exclude": [
-    "node_modules"
+    "node_modules/!(\\@types)/**"
   ]
 }
