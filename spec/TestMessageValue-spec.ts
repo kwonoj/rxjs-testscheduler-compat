@@ -11,9 +11,9 @@ function deleteErrorNotificationStack(marble: TestMessage) {
   const { notification } = marble;
 
   if (notification) {
-    const { kind, exception } = notification;
-    if (kind === 'E' && exception instanceof Error) {
-      notification.exception = { name: exception.name, message: exception.message };
+    const { kind, error } = notification;
+    if (kind === 'E' && error instanceof Error) {
+      notification.error = { name: error.name, message: error.message };
     }
   }
   return marble;
