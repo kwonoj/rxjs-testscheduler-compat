@@ -38,7 +38,6 @@
       "src/**/*.ts"
     ],
     "exclude": [
-      "typings",
       "node_modules"
     ],
     "extension": [
@@ -57,7 +56,7 @@
     "*.@(ts)": "tslint"
   },
   "scripts": {
-    "prepublish": "shx rm -rf ./typings && typings install && npm run build",
+    "prepublish": "npm run build",
     "test": "npm-run-all build:clean && mocha --reporter nyan --compilers ts:ts-node/register --recursive --bail spec",
     "test:cover": "nyc --reporter=lcov --reporter=html npm test",
     "lint": "tslint src/**/*.ts spec/**/*.ts",
@@ -90,6 +89,9 @@
   },
   "homepage": "https://github.com/kwonoj/rxjs-testscheduler-compat#readme",
   "devDependencies": {
+    "@types/chai": "^3.4.34",
+    "@types/lodash": "^4.14.43",
+    "@types/mocha": "^2.2.33",
     "chai": "^3.5.0",
     "commitizen": "^2.8.6",
     "conventional-changelog-cli": "^1.2.0",
@@ -105,10 +107,13 @@
     "ts-node": "^1.7.2",
     "tslint": "^4.0.2",
     "typescript": "^2.1.4",
-    "typings": "^2.0.0",
     "validate-commit-msg": "^2.8.0"
   },
   "peerDependencies": {
     "rxjs": "^5.0.1"
+  },
+  "dependencies": {
+    "@types/es6-collections": "^0.5.29",
+    "@types/es6-shim": "^0.31.32"
   }
 }
