@@ -105,7 +105,7 @@
     "rxjs": "^5.0.1",
     "shx": "^0.2.0",
     "ts-node": "^2.0.0",
-    "tslint": "^4.0.2",
+    "tslint": "^4.4.1",
     "typescript": "^2.1.4",
     "validate-commit-msg": "^2.8.0"
   },
