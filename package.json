@@ -89,9 +89,9 @@
   },
   "homepage": "https://github.com/kwonoj/rxjs-testscheduler-compat#readme",
   "devDependencies": {
-    "@types/chai": "^3.4.34",
-    "@types/lodash": "^4.14.43",
-    "@types/mocha": "^2.2.33",
+    "@types/chai": "^3.4.35",
+    "@types/lodash": "^4.14.53",
+    "@types/mocha": "^2.2.39",
     "chai": "^3.5.0",
     "commitizen": "^2.8.6",
     "conventional-changelog-cli": "^1.2.0",
@@ -106,11 +106,11 @@
     "shx": "^0.2.0",
     "ts-node": "^2.0.0",
     "tslint": "^4.0.2",
-    "typescript": "^2.1.4",
+    "typescript": "2.1.4",
     "validate-commit-msg": "^2.8.0"
   },
   "peerDependencies": {
-    "rxjs": "^5.0.1"
+    "rxjs": "^5.2.0"
   },
   "dependencies": {
     "@types/es6-collections": "^0.5.29",

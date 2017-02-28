@@ -15,7 +15,8 @@
     "moduleResolution": "node",
     "pretty": true,
     "target": "es5",
-    "outDir": "dist"
+    "outDir": "dist",
+    "typeRoots" : ["./node_modules/@types"]
   },
   "formatCodeOptions": {
     "indentSize": 2,
