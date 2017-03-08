@@ -29,17 +29,18 @@ export class TestScheduler extends VirtualTimeScheduler implements VirtualTestSc
   }
 
   private setupOptions(options: SchedulerStartOptions): SchedulerStartOptions {
+    const isAssigned = (value: any) => Number.isInteger(value) && value >= 0;
+
     const ret = options;
-    if (!options.created) {
+    if (!isAssigned(options.created)) {
       ret.created = 100;
     }
-    if (!options.subscribed) {
+    if (!isAssigned(options.subscribed)) {
       ret.subscribed = 200;
     }
-    if (!options.unsubscribed) {
+    if (!isAssigned(ret.unsubscribed)) {
       ret.unsubscribed = 1000;
     }
-
     return ret;
   }
 

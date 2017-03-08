@@ -477,5 +477,34 @@ describe('TestScheduler', () => {
       expect(observer.messages).to.deep.equal(expected);
       expect(subject.subscriptions).to.deep.equal(expectedSubscriptions);
     });
+
+    it('should allow zero value as options', () => {
+      const options = {
+        created: 0,
+        subscribed: 0,
+        unsubscribed: 200
+      };
+
+      const subject = scheduler.createColdObservable(
+        next(50, 1),
+        next(150, 2),
+        next(250, 3),
+        complete(300)
+      );
+
+      const expected = [
+        new TestMessageValue(50, Rx.Notification.createNext(1)),
+        new TestMessageValue(150, Rx.Notification.createNext(2)),
+      ];
+
+      const expectedSubscriptions = [
+        subscribe(0, 200)
+      ];
+
+      const observer = scheduler.startScheduler(() => subject, options);
+
+      expect(observer.messages).to.deep.equal(expected);
+      expect(subject.subscriptions).to.deep.equal(expectedSubscriptions);
+    });
   });
 });
