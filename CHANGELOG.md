@@ -1,3 +1,13 @@
+<a name="0.0.5"></a>
+## [0.0.5](https://github.com/kwonoj/rxjs-testscheduler-compat/compare/v0.0.3...v0.0.5) (2017-03-08)
+
+
+### Bug Fixes
+
+* **TestScheduler:** allow SchedulerStartOptions to have zero as values ([4ddfdc6](https://github.com/kwonoj/rxjs-testscheduler-compat/commit/4ddfdc6)), closes [#38](https://github.com/kwonoj/rxjs-testscheduler-compat/issues/38)
+
+
+
 <a name="0.0.4"></a>
 ## [0.0.4](https://github.com/kwonoj/rxjs-testscheduler-compat/compare/v0.0.3...v0.0.4) (2016-10-03)
 
