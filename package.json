@@ -55,7 +55,7 @@
     ]
   },
   "scripts": {
-    "prepublish": "npm run build",
+    "prepublish": "npm prune && npm run build",
     "precommit": "lint-staged",
     "commitmsg": "validate-commit-msg",
     "test": "npm-run-all build:clean && mocha --reporter nyan --compilers ts:ts-node/register --recursive --bail spec",
