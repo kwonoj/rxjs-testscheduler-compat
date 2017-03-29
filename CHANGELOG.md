@@ -1,3 +1,17 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/kwonoj/rxjs-testscheduler-compat/compare/v0.0.3...v1.0.0) (2017-03-29)
+
+### Features
+
+* **VirtualPromise:** provide Symbol.toStringTag, use TS lib for ES2015 definitions ([599ccfd](https://github.com/kwonoj/rxjs-testscheduler-compat/commit/599ccfd))
+
+
+### BREAKING CHANGES
+
+* **VirtualPromise:** may not compatible with @types/es6-shim, @types/es6-collections
+
+
+
 <a name="0.0.5"></a>
 ## [0.0.5](https://github.com/kwonoj/rxjs-testscheduler-compat/compare/v0.0.3...v0.0.5) (2017-03-08)
 
