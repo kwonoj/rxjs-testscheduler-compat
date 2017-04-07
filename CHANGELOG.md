@@ -1,3 +1,13 @@
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/kwonoj/rxjs-testscheduler-compat/compare/v1.0.0...v1.0.1) (2017-04-07)
+
+
+### Bug Fixes
+
+* **package:** allow peerdependency into latest ([770b079](https://github.com/kwonoj/rxjs-testscheduler-compat/commit/770b079))
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/kwonoj/rxjs-testscheduler-compat/compare/v0.0.3...v1.0.0) (2017-03-29)
 

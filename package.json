@@ -1,6 +1,6 @@
 {
   "name": "@kwonoj/rxjs-testscheduler-compat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "RxJS v4 TestScheduler interface for RxJS v5",
   "main": "./dist/src/index.js",
   "types": "./dist/src/index.d.ts",
