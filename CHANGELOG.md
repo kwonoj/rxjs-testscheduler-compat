@@ -1,3 +1,13 @@
+<a name="1.0.2"></a>
+## [1.0.2](https://github.com/kwonoj/rxjs-testscheduler-compat/compare/v1.0.1...v1.0.2) (2017-07-10)
+
+
+### Bug Fixes
+
+* **BaseVirtualPromise:** update type definition to compatible with TS 2.4 ([08c1acc](https://github.com/kwonoj/rxjs-testscheduler-compat/commit/08c1acc))
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/kwonoj/rxjs-testscheduler-compat/compare/v1.0.0...v1.0.1) (2017-04-07)
 
