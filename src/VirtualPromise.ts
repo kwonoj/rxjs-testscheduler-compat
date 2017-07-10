@@ -34,10 +34,10 @@ export class BaseVirtualPromise implements VirtualPromise {
     );
   }
 
-  public then<TResult>(onfulfilled?: (value: any) => TResult | PromiseLike<TResult>,
-                       onrejected?: (reason: any) => TResult | PromiseLike<TResult>): VirtualPromise
-  public then<TResult>(onfulfilled?: (value: any) => TResult | PromiseLike<TResult>,
-                       onrejected?: (reason: any) => void): VirtualPromise {
+  public then<TResult, TResult2 = never>(onfulfilled?: ((value: any) => TResult | PromiseLike<TResult>) | undefined | null,
+                                         onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): VirtualPromise
+  public then<TResult, TResult2 = never>(onfulfilled?: ((value: any) => TResult | PromiseLike<TResult>) | undefined | null,
+                                         onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): VirtualPromise {
     const subject = this;
     const { scheduler, messages } = subject;
     const updateObservers = (observer: PartialObserver<any>) => {
