@@ -81,4 +81,8 @@ export class BaseVirtualPromise implements VirtualPromise {
   public catch(_onrejected?: (reason: any) => void): Promise<any> {
     throw new Error('not implemented');
   }
+
+  public finally(_onfinally?: (() => void) | undefined | null): Promise<any> {
+    throw new Error('not implemented');
+  }
 }
