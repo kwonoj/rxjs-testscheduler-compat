@@ -11,7 +11,7 @@
     "no-duplicate-variable": true,
     "no-var-keyword": true,
     "no-empty": true,
-    "no-unused-expression": true,
+    "no-unused-expression-chai": true,
     "no-use-before-declare": true,
     "no-var-requires": true,
     "no-require-imports": true,
@@ -35,5 +35,8 @@
       "check-decl",
       "check-operator",
       "check-type"]
-  }
+  },
+  "rulesDirectory": [
+    "tslint-no-unused-expression-chai"
+  ]
 }

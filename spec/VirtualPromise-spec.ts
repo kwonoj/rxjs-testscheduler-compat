@@ -34,9 +34,10 @@ describe('VirtualPromise', () => {
 
   it('should reject at scheduled time', () => {
     const observer = scheduler.createObserver();
-    const expected = [ new Error('x') ];
+    const e = new Error('x');
+    const expected = [e];
     const value: Array<any> = [];
-    const promise = new BaseVirtualPromise(scheduler, [error(50, new Error('x'))]);
+    const promise = new BaseVirtualPromise(scheduler, [error(50, e)]);
 
     promise.then(() => null, x => value.push(x));
 
