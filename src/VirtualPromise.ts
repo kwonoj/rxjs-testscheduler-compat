@@ -35,7 +35,7 @@ export class BaseVirtualPromise implements VirtualPromise {
   }
 
   public then<TResult, TResult2 = never>(onfulfilled?: ((value: any) => TResult | PromiseLike<TResult>) | undefined | null,
-                                         onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): VirtualPromise
+                                         onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): VirtualPromise;
   public then<TResult, TResult2 = never>(onfulfilled?: ((value: any) => TResult | PromiseLike<TResult>) | undefined | null,
                                          onrejected?: ((reason: any) => TResult2 | PromiseLike<TResult2>) | undefined | null): VirtualPromise {
     const subject = this;
@@ -77,7 +77,7 @@ export class BaseVirtualPromise implements VirtualPromise {
     return promise || new BaseVirtualPromise(scheduler, messages);
   }
 
-  public catch(_onrejected?: (reason: any) => any | PromiseLike<any>): Promise<any>
+  public catch(_onrejected?: (reason: any) => any | PromiseLike<any>): Promise<any>;
   public catch(_onrejected?: (reason: any) => void): Promise<any> {
     throw new Error('not implemented');
   }

@@ -1,0 +1,35 @@
+language: node_js
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.npm
+
+env:
+  matrix:
+  - NODE_VER=8
+
+matrix:
+  fast_finish: true
+
+before_install:
+  - nvm install $NODE_VER
+  - npm install -g npm@6.3.0
+  - npm install -g greenkeeper-lockfile@1
+  - node -v && npm -v
+
+install:
+  - npm install
+  - npm run lint
+
+before_script: greenkeeper-lockfile-update
+
+script:
+  - npm run build
+  - rm -rf ./dist
+  - npm run test:cover
+
+after_script: greenkeeper-lockfile-upload
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
